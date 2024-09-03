@@ -28,7 +28,7 @@ This guide will walk you through the steps to set up a Windows slave for Jenkins
 ## Screenshots
 - [Enable JNLP Port](Screenshots/TCP.png)
 - [Local Build Confirmation](Screenshots/local_files_path.png)
-- [Windows Slave Running](screenshots/windows_slave.png)
-- [Console Output](screenshots/console_output.png)
+- [Windows Slave Running](Screenshots/pipeline_stages.png)
+- [Console Output](Screenshots/console_output.png)
 
 
