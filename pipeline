@@ -1,0 +1,35 @@
+pipeline {
+    agent { label 'win_slave' }  // Use your Windows slave instance
+
+    stages {
+        stage ('checkout') {
+            steps {
+                git 'https://github.com/MDinesh28/jenkins-java-project.git'
+            }
+        }
+        stage ('build') {
+            steps {
+                bat 'mvn compile'  // Use 'bat' for running commands in Windows
+            }
+        }
+        stage ('test') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+        stage ('artifact') {
+            steps {
+                bat 'mvn package'
+            }
+        }
+        stage ('deploy') {
+            input {
+                message "Is your input correct?"
+                ok "Yes"
+            }
+            steps {
+                echo "My code is deployed"
+            }
+        }
+    }
+}
